@@ -22,3 +22,7 @@ Hint:
 4. Check if the iterated variable falls
 5. Increase counter if the condition is true
 6. return a result <- counter / N
+
+## Practice 2
+
+ Find 20 more functions in R and make an example of it.
