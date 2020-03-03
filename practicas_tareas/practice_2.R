@@ -47,5 +47,47 @@ cat('one',2,'three',4,'five') #one 2 three 4 five
 # 10. trunk() - rounds to the nearest integer in the direction of 0.
 trunc(125.2395) #[1] 125
 
-# 11.
+# 11. round a number with the indicated decimals, if not indicated an integer is given
+round (6.78.1)
+round (11.80)
+
+# 12. Argument (...)
+inverse <- function (...) {
+  v <- unlist (list (...)) # Assign the arguments to a vector
+  x <- 1 / v
+  return (x)
+}
+inverse (3)
+
+# 13. concatenate
+x <- c (1,2,3)
+t <- c ("one", "two", "three")
+x; t
+
+# 14. root
+sqrt (25)
+
+# 15. text and output variable, \ n new line
+x <- 5
+and <- 2
+cat (x, "raised to", y, "is", x ^ y, "\ n")
+
+# 16. shows the number of elements
+x <- 7:10
+length (x)
+
+# 17. removes decimals
+trunc (3.1416)
+trunc (23.0987)
+
+# 18. returns T if the condition is met
+x <- runif (10, -10, 100)
+if (any (x <0)) cat ("In x there are negative numbers \ n")
+
+# 19. sum the vector elements
+x <- runif (50,2,15)
+sum (x)
+
+# 20. generates random numbers
+runif (3,1,10)
 
