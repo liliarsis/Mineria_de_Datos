@@ -1,11 +1,20 @@
 #Evaluacion
 
-# Method 1: Select the file manually
+#Method 1: Select the file manually
 stats <- read.csv(file.choose())
 stats
 
-#str(stats)
-#summary(stats)
+#Method 2: Set the Working Directory
+getwd()
+setwd("C:\\Users\\W 10 PRO\\Downloads\\Mineria_Datos\\DataMining\\Evaluacion")
+getwd()
+
+#Import the csv dataset
+stats <- read.csv("test-data.csv")
+
+#Checking the dataset
+str(stats)
+summary(stats)
 
 #Execute below code to generate three new vectors
 Country_Code <- c("ABW","AFG","AGO","ALB","ARE","ARG","ARM","ATG","AUS","AUT","AZE","BDI","BEL","BEN","BFA","BGD","BGR","BHR","BHS","BIH","BLR","BLZ","BOL","BRA","BRB","BRN","BTN","BWA","CAF","CAN","CHE","CHL","CHN","CIV","CMR","COG","COL","COM","CPV","CRI","CUB","CYP","CZE","DEU","DJI","DNK","DOM","DZA","ECU","EGY","ERI","ESP","EST","ETH","FIN","FJI","FRA","FSM","GAB","GBR","GEO","GHA","GIN","GMB","GNB","GNQ","GRC","GRD","GTM","GUM","GUY","HKG","HND","HRV","HTI","HUN","IDN","IND","IRL","IRN","IRQ","ISL","ITA","JAM","JOR","JPN","KAZ","KEN","KGZ","KHM","KIR","KOR","KWT","LAO","LBN","LBR","LBY","LCA","LKA","LSO","LTU","LUX","LVA","MAC","MAR","MDA","MDG","MDV","MEX","MKD","MLI","MLT","MMR","MNE","MNG","MOZ","MRT","MUS","MWI","MYS","NAM","NCL","NER","NGA","NIC","NLD","NOR","NPL","NZL","OMN","PAK","PAN","PER","PHL","PNG","POL","PRI","PRT","PRY","PYF","QAT","ROU","RUS","RWA","SAU","SDN","SEN","SGP","SLB","SLE","SLV","SOM","SSD","STP","SUR","SVK","SVN","SWE","SWZ","SYR","TCD","TGO","THA","TJK","TKM","TLS","TON","TTO","TUN","TUR","TZA","UGA","UKR","URY","USA","UZB","VCT","VEN","VIR","VNM","VUT","WSM","YEM","ZAF","COD","ZMB","ZWE")
@@ -14,26 +23,36 @@ Life_Expectancy_At_Birth_2013 <- c(75.3286585365854,60.0282682926829,51.86617073
 
 #(c) Kirill Eremenko, www.superdatascience.com
 
+#Creates data frames from the previous vectors
 df1960 <- data.frame( Code= Country_Code,
                       Life.Exp= Life_Expectancy_At_Birth_1960)
 df2013 <- data.frame( Code= Country_Code,
                       Life.Exp= Life_Expectancy_At_Birth_2013)
 
+#Check data frames
+summary(df1960)
+summary(df2013)
+
+#Merge two data frames by common columns or row names
+
 merged1960 <- merge(stats, df1960, by.x="Country.Code", by.y="Code")
 
 merged2013 <- merge(stats, df2013, by.x="Country.Code", by.y="Code")
 
+#ggplot
+library(ggplot2)
+
+#Creates a plot
 qplot(data=merged1960, x=Fertility.Rate, y=Life.Exp,
    color=Region,                               
-   size=I(5), 
+   size=I(1), 
    shape=I(0.6),                               
    main = "Scatter plot of Expectancy vs Fertility in 1960"
 )
 
 qplot(data=merged2013, x=Fertility.Rate, y=Life.Exp,
       color=Region,                               
-      size=I(5), 
+      size=I(1), 
       shape=I(0.6),                               
       main = "Scatter plot of Life Expectancy vs Fertility in 2013"
 )
-
