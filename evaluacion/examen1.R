@@ -56,3 +56,42 @@ qplot(data=merged2013, x=Fertility.Rate, y=Life.Exp,
       shape=I(0.6),                               
       main = "Scatter plot of Life Expectancy vs Fertility in 2013"
 )
+
+#Analisis de 1960 y 2013
+#A. Dentro de la Esperanza de vida se observa lo siguiente:
+#  En 1960 el rango de esperanza de vida es 30 a 70 aos
+#  En 2013 el rango de esperanza de vida es de 50 a 80 a;o
+#  La esperanza de vida es mayor en 2013 con un promedio de 15 a;os mas
+#  En 1960 los paises de Europa tienen la mayor esperanza de vida.
+#  En 1960 los paises de Africa (mayormente) y Asia tienen la menor esperanza de vida.
+#  En 1960 los paises de Medio Oriente y Oceania tiene una mediana esperanza de vida.
+#  En 2013 los paises de Asia se agrega junto con Europa a la mayor esperanza de vida
+#  En 2013 los paises de Africa continuan a tener la menor esperanza de vida. 
+#B. Dentro de la Tasa de fertilidad se observa lo siguiente:
+#  El rango de la tasa de fertilizad en 1960 y 2013 es 1 a 8.5
+#  En 1960 y 2013 los paises de Africa la mayor tasa de fertilidad con un promedio 5 hijos.
+#  En cambio los paises de Asia, Europa tienen la menor tasa de fertilidad con un promedio de 2.
+# En conclusion, se puede decir que los paises de Asia y Europa tiene una mayor poblacion adulta 
+# y una baja tasa de fertilidad que ha persistiendo durante los a;os
+# Los paises de Africa han tenido desde 1960 la mayor tasa de fertilidad pero la menor esperanza de vida.
+# Algo positivo es que el rango de esperanza de vida ha aumentado en todos los paises. 
+
+#Eng version
+#Analisys between 1960 and 2013
+#Within the "Life expectancy" the following is observed:
+# In 1960 the range of life expectancy is 30 to 70 years
+# In 2013 the range of life expectancy is from 50 to 80 a; or
+# Life expectancy is higher in 2013 with an average of 15 years more
+# In 1960 the countries of Europe have the highest life expectancy.
+# In 1960 the countries of Africa (mostly) and Asia have the lowest life expectancy.
+# In 1960 the countries of the Middle East and Oceania have a medium life expectancy.
+# In 2013 the countries of Asia along with Europe are added to the greater life expectancy
+# In 2013, African countries continue to have the lowest life expectancy.
+#B. The following is observed within the Fertility Rate:
+# The fertilization rate range in 1960 and 2013 is 1 to 8.5
+# In 1960 and 2013 the African countries had the highest fertility rate with an average of 5 children.
+# In contrast, Asian countries, Europe have the lowest fertility rate with an average of 2.
+# In conclusion, it can be said that the countries of Asia and Europe have a larger adult population
+# and a low fertility rate that has persisted over the years
+# African countries have had the highest fertility rate since 1960 but the lowest life expectancy.
+# Something positive is that the range of life expectancy has increased in all countries.
