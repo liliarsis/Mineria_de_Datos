@@ -14,6 +14,7 @@ Next, the practices carried out in this course will be shown.
 - [Practice 2](#practice-2)
 - [Practice 3](#practice-3)
 - [Practice 4](#practice-4)
+- [Evaluation](#evaluation)
 - [Sources](#sources)
 - [Collaborators](#Collaborators)
 
@@ -227,6 +228,79 @@ backwardElimination (training_set, SL)
 ```
 
 ## Practice 4
+## Evaluation
+```
+#1. . We import the dataset and declare it as movies
+movies <- read.csv("C:/Users/W 10 PRO/Downloads/Project-Data.csv")
+#If you want you can import it manually
+#movies <- read.csv(file.choose())
+
+#2. Exploring dataset 
+head(movies)#Shows top rows
+colnames(movies)#Shows column names
+str(movies)Shows the structure
+summary(movies)#Shows summary
+
+#3. Make filters
+#Filtering by genre, take the genres of dataframe movies.
+filt_gen <- movies[movies$Genre %in% c("action", "adventure", "animation", "comedy", "drama"),]
+
+#Filtration by study, take the studies within the filter by gender.
+filt_stu <- filt_gen[filt_gen$Studio %in% c("Buena Vista Studios", "WB", "Fox", "Universal", "Paramount Pictures"),]
+
+#4. The GGPlot2 package is activated, to make the plot.
+library(ggplot2)
+#In case you don't have the package installed
+#install.packages("ggplot2")
+
+#5. Creating the graph using ggplot
+#The variable mp (moviesplot) is created that takes, from the filter per study, its X and Y axes
+# The x-axis is the Genre column and the y-axis is the Gross ... Us column.
+mp <- ggplot(data = filt_stu, aes(x = Genre, y=Gross...US))
+# Add box plot function
+mp + geom_boxplot()
+
+#Jitter R function adds noise to a number vector
+p <- mp + geom_jitter() + geom_boxplot()
+p
+
+#Add aesthetics to jitter: size and color
+p <- mp +geom_jitter(aes(size = Budget...mill., color=Studio)) + 
+  geom_boxplot() 
+p
+
+#If we see there are some black dots, the black dots are removed and the boxplot is transparent
+p <- mp +geom_jitter(aes(size = Budget...mill., color=Studio)) +
+  geom_boxplot(alpha=0.7, outlier.colour =NA)
+p
+
+#Name added to x, y axes and title to plot
+p <- p +xlab("Genre") + ylab("Gross % US") + ggtitle("Domestic Gross % by Genre")
+p
+
+#Finally the graphic is customized by changing the color, size and font
+#For this we use element_text,
+p <- p + theme(axis.title.x = element_text(color = "Blue", size = 20) ,
+               axis.title.y = element_text(color = "Blue", size = 20) ,
+               axis.text.x  = element_text(size = 10),
+               axis.text.y  = element_text(size = 10),
+               plot.title   = element_text(size = 15),
+               legend.title = element_text(size = 15),
+               text = element_text(family = "Courier"))
+p
+#Change the legend name of Studio y Budget...Mill
+p$labels$size <- "Budget $M"
+p$labels$colour <- "Studio's"
+p
+```
+From the plot the following is observed:
+
+The most popular genre in studios is action, the least is drama.
+The average gain for an action movie is 40 percent.
+The genre comedy is the one that has, on average, more profit
+The adventure genre has on average a lower profit.
+Buena vista studios has the movie with the most profit, it is from the drama genre. Also it has the film with less profit, being this one of the animation sort.
+
 ## Sources
 - VilBer, F. (n.d.). Graficas con ggplot. Retrieved 28 May 2020, from [https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
 - Wickham, H. (n.d.). geom_jitter function | R Documentation. Retrieved 28 May 2020, from [https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter)
