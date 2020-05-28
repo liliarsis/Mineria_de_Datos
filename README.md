@@ -144,7 +144,85 @@ ggplot() +
 ## Practice 2
 
  
-## Practice 3
+## Practice 3. Multiple Linear Regression
+converts the values of the state variable to numbers
+```
+dataset $ State = factor (dataset $ State,
+levels = c ('New York', 'California', 'Florida'),
+labels = c (1,2,3))
+data set
+```
+
+Division of the data set into the training set and the test set
+Install.packages ('caTools')
+Divide the vector data into two sets, in this case, the benefit was configured to divide it into training_set and test_set.
+```
+library (caTools)
+set.seed (123) #create random simulations that can be played. seed = a number.
+split <- sample.split ($ Profit dataset, SplitRatio = 0.8)
+training_set <- subset (dataset, split == TRUE) # one point and it will be true
+test_set <- subset (dataset, split == FALSE) # one point and it will be false
+```
+
+Fit multiple linear regression to the training set
+```
+regressor = lm (formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State)
+regressor = lm (formula = Profit ~.,
+data = training_set)
+
+summary (regressor)
+```
+
+Prediction of test set results
+```
+y_pred = predict (regressor, newdata = test_set)
+y_pred
+```
+Allocation: visualize the multiple cladding regression model with R.D.
+
+Building the optimal model using Backward Elimination
+```
+regressor = lm (formula = Profit ~ R.D. Expenses + Administration + Marketing. Expenses + Status,
+data = dataset)
+summary (regressor)
+
+regressor = lm (formula = Profit ~ R.D. Expense + Administration + Marketing. Expense,
+data = dataset)
+summary (regressor)
+
+regressor = lm (formula = Profit ~ R.D.Spend + Marketing.Spend,
+data = dataset)
+summary (regressor)
+
+regressor = lm (formula = Profit ~ R.D.Spend + Marketing.Spend,
+data = dataset)
+summary (regressor)
+
+y_pred = predict (regressor, newdata = test_set)
+y_pred
+```
+The task analyzes the next spray backwards Elimination function.
+Variables are created in the equation and the least influential category is removed, one after the other is excluded in the loop because it ends when all categories are analyzed. The category that remained at the end was R.D. Spend your result marked 0 
+```
+backwardElimination <- function (x, sl) {
+numVars = length (x)
+for (i in c (1: numVars)) {
+regressor = lm (formula = Profit ~., data = x)
+maxVar = max (coef (summary (regressor)) [c (2: numVars), "Pr (> | t |)"])
+if (maxVar> sl) {
+j = which (coef (summary (regressor)) [c (2: numVars), "Pr (> | t |)"] == maxVar)
+x = x [, -j]
+}
+numVars = numVars - 1
+}
+return (summary (regressor))
+}
+
+SL = 0.05
+#dataset = dataset [, c (1,2,3,4,5)]
+training set
+backwardElimination (training_set, SL)
+```
 
 ## Practice 4
 ## Sources
