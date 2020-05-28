@@ -83,8 +83,63 @@ lm(formula, data, subset, weights, na.action,
 ### What is ElemStatLearn?
 ElemStatLearn Library is a package created 2015-06-26 cointains Data Sets, Functions and Examples from the Book: "The Elements of Statistical Learning, Data Mining, Inference, and Prediction" by Trevor Hastie, Robert Tibshirani and Jerome Friedman. Useful when reading the book above mentioned, in the documentation referred to as 'the book'.
 
-## Practice 1
+## Practice 1. Simple Linear Regression 
+### We write the path of our file
+```
+getwd()
+setwd("/Users/anahiestrada/Desktop/SimpleLinearRegression")
+getwd()
+```
+Importing the dataset
+```
+dataset <- read.csv('ventas_comision.csv')
+```
+Splitting the dataset into the Training set and Test set
+Install.packages('caTools')
+The set.seed function is used to set the random seed for all scrambling functions.
 
+```
+install.packages('caTools')
+library(caTools)
+set.seed(123)
+split <- sample.split(dataset$comision, SplitRatio = 2/3)
+training_set <- subset(dataset, split == TRUE)
+test_set <- subset(dataset, split == FALSE)
+```
+Fitting Simple Linear Regression to the Training set
+commission is the variable that we want to predict in the future depending on sales.
+```
+regressor = lm(formula = comision ~ Ventas,
+               data = dataset)
+summary(regressor)
+```
+Predicting the Test set results
+```
+y_pred = predict(regressor, newdata = test_set)
+```
+Visualising the Training set results
+```
+library(ggplot2)
+ggplot() +
+  geom_point(aes(x=training_set$Ventas, y=training_set$comision),
+             color = 'blue') +
+  geom_line(aes(x = training_set$Ventas, y = predict(regressor, newdata = training_set)),
+            color = 'green') +
+  ggtitle('ventas vs comision (Training Set)') +
+  xlab('Ventas') +
+  ylab('Comision')
+  ```
+Visualising the Test set results
+```
+ggplot() +
+  geom_point(aes(x=test_set$Ventas, y=test_set$comision),
+             color = 'blue') +
+  geom_line(aes(x = training_set$Ventas, y = predict(regressor, newdata = training_set)),
+            color = 'green') +
+  ggtitle('ventas vs comision (Test Set)') +
+  xlab('Ventas') +
+  ylab('Comision')
+```
 
 ## Practice 2
 
