@@ -1,8 +1,7 @@
 # Unit 2
 
 ## Introduction
-
-
+Data graphics is essential in displaying large amounts of information in a concise and concise way. It helps us to make decisions. In the R language, it is used thanks to the ggplot library.
 Next, the practices carried out in this course will be shown.
 
 # Content
@@ -94,18 +93,18 @@ ElemStatLearn Library is a package created 2015-06-26 cointains Data Sets, Funct
 
 ## Practice 4
 ## Information Sources
-Graphical grammar
+- Graphical grammar
 [https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
 [https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
-What is geom_jitter function in R?
+- What is geom_jitter function in R?
 [https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter)
-P-value
+- P-value
 [https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/](https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/)
-lm() function in R
+- lm() function in R
 [https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm)
-split() function in R
+- split() function in R
 [https://www.rdocumentation.org/packages/caTools/versions/1.17.1/topics/sample.split](https://www.rdocumentation.org/packages/caTools/versions/1.17.1/topics/sample.split
-ElemStatLearn
+- ElemStatLearn
 [https://github.com/cran/ElemStatLearn/tree/master/R](https://github.com/cran/ElemStatLearn/tree/master/R)
 
 ## Collaborators
