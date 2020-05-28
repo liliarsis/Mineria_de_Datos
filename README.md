@@ -205,7 +205,8 @@ y_pred = predict (regressor, newdata = test_set)
 y_pred
 ```
 The task analyzes the next spray backwards Elimination function.
-Variables are created in the equation and the least influential category is removed, one after the other is excluded in the loop because it ends when all categories are analyzed. The category that remained at the end was R.D. Spend your result marked 0 
+Variables are created in the equation and the least influential category is removed, one after the other is excluded in the loop because it ends when all categories are analyzed. The category that remained at the end was R.D. Spend your result marked 0.
+The residuals show us distances that exist between the values of the variables and the data set quality values of the R2 adjustment, which in our case is 0.9425.
 ```
 backwardElimination <- function (x, sl) {
 numVars = length (x)
@@ -228,6 +229,107 @@ backwardElimination (training_set, SL)
 ```
 
 ## Practice 4
+## Backward Elimination Function
+
+getwd ()
+setwd ("/ Users / anahiestrada / Desktop / DataMining-master / MachineLearning / MultipleLinearRegression")
+getwd ()
+
+Importing the dataset
+
+dataset <- read.csv ('50_Startups.csv')
+
+Encoding categorical data. Convert the values of the State variable to numbers
+
+dataset $ State = factor (dataset $ State,
+                       levels = c ('New York', 'California', 'Florida'),
+                       labels = c (1,2,3))
+dataset
+
+Splitting the dataset into the Training set and Test set
+Install.packages ('caTools')
+library (caTools)
+
+create random simulations that can be played. seed = A number.
+
+set.seed (123) 
+split <- sample.split (dataset $ Profit, SplitRatio = 0.8)
+
+divide data into training set
+
+training_set <- subset (dataset, split == TRUE) 
+
+divide data into test set
+
+test_set <- subset (dataset, split == FALSE) 
+
+Fitting Multiple Linear Regression to the Training set.
+In this line a regressor is created and the dataset, through the lm function, in this case the training set will take the X axis
+
+regressor = lm (formula = Profit ~.,
+that it will use is assigned
+               data = training_set) 
+
+by means of the summary we can visualize the results
+summary (regressor) 
+
+Prediction the Test set results. 
+We create a vector of predictions to visualize the fit curve of the data. With the predict function we obtain the predictions
+
+y_pred = predict (regressor, newdata = test_set)
+y_pred 
+
+Assigment: visualize the siple liner regression model with R.D.Spend
+
+Building the optimal model using Backward Elimination
+regressor = lm (formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
+               data = dataset)
+summary (regressor)
+
+regressor = lm (formula = Profit ~ R.D.Spend + Administration + Marketing.Spend,
+               data = dataset)
+summary (regressor)
+
+regressor = lm (formula = Profit ~ R.D.Spend + Marketing.Spend,
+               data = dataset)
+summary (regressor)
+
+regressor = lm (formula = Profit ~ R.D.Spend + Marketing.Spend,
+               data = dataset)
+summary (regressor)
+
+y_pred = predict (regressor, newdata = test_set)
+y_pred
+
+Homework analyze the follow atomation backward Elimination function
+a model is created with all the variables, indicates the length of the variables, Adjust the MRL with the Training Set,the cycle continues until all variables are reviewed.
+backwardElimination <- function (x, sl) {
+  numVars = length (x) 
+  for (i in c (1: numVars)) {
+    regressor = lm (formula = Profit ~., data = x) 
+    maxVar = max(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"])
+    if (maxVar > sl){#si el 
+      j = which(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"] == maxVar)
+      x = x[, -j]
+    }
+    numVars = numVars - 1 
+  }
+  return (summary (regressor))
+}
+significance level, variables with a p-value greater than this will be discarded
+SL = 0.05 
+
+dataset = dataset [, c (1,2,3,4,5)]
+
+shows the 5 columns with the 50 data
+
+training_set 
+
+in visualizing the results we see that only R.D.Spend is significant for our regression analysis.
+
+backwardElimination (training_set, SL)
+
+
 ## Evaluation
 ```
 #1. . We import the dataset and declare it as movies
