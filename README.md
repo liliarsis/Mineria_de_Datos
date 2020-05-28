@@ -14,7 +14,7 @@ Next, the practices carried out in this course will be shown.
 - [Practice 2](#practice-2)
 - [Practice 3](#practice-3)
 - [Practice 4](#practice-4)
-- [Information Sources](#information-sources)
+- [Sources](#sources)
 - [Collaborators](#Collaborators)
 
 ## Investigation 1
@@ -92,7 +92,7 @@ ElemStatLearn Library is a package created 2015-06-26 cointains Data Sets, Funct
 ## Practice 3
 
 ## Practice 4
-## Information Sources
+## Sources
 - Graphical grammar
 [https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
 [https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
