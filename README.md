@@ -293,6 +293,8 @@ p$labels$size <- "Budget $M"
 p$labels$colour <- "Studio's"
 p
 ```
+![Plot](https://github.com/liliarsis/mineria_de_datos/blob/unit2/evaluación/Rplot1.png)
+
 From the plot the following is observed:
 
 The most popular genre in studios is action, the least is drama.
