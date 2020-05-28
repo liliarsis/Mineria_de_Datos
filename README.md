@@ -228,18 +228,14 @@ backwardElimination (training_set, SL)
 
 ## Practice 4
 ## Sources
-- Graphical grammar
-[https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
-[https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149)
-- What is geom_jitter function in R?
-[https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter)
-- P-value
-[https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/](https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/)
-- lm() function in R
+- VilBer, F. (n.d.). Graficas con ggplot. Retrieved 28 May 2020, from [https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
+- Wickham, H. (n.d.). geom_jitter function | R Documentation. Retrieved 28 May 2020, from [https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter)
+- Rumsey, D. J. (n.d.). What a p-Value Tells You about Statistical Data - dummies. (2020). Retrieved 28 May 2020, from [https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/](https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/)
+- R-core R-core@R-project.org. (n. d.). lm function. Retrieved 28 May 2020, from 
 [https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm)
-- split() function in R
-[https://www.rdocumentation.org/packages/caTools/versions/1.17.1/topics/sample.split](https://www.rdocumentation.org/packages/caTools/versions/1.17.1/topics/sample.split
-- ElemStatLearn
+- Khachatryan, H. (n.d.). sample.split function | R Documentation. Retrieved May 28, 2020, from 
+[https://www.rdocumentation.org/packages/caTools/versions/1.17.1/topics/sample.split](https://www.rdocumentation.org/packages/caTools/versions/1.17.1/topics/sample.split)
+- C. (2019, August 12). cran/ElemStatLearn. Retrieved May 28, 2020, from
 [https://github.com/cran/ElemStatLearn/tree/master/R](https://github.com/cran/ElemStatLearn/tree/master/R)
 
 ## Collaborators
