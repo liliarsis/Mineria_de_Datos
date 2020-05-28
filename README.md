@@ -83,8 +83,9 @@ lm(formula, data, subset, weights, na.action,
 ### What is ElemStatLearn?
 ElemStatLearn Library is a package created 2015-06-26 cointains Data Sets, Functions and Examples from the Book: "The Elements of Statistical Learning, Data Mining, Inference, and Prediction" by Trevor Hastie, Robert Tibshirani and Jerome Friedman. Useful when reading the book above mentioned, in the documentation referred to as 'the book'.
 
-## Practice 1. Simple Linear Regression 
-### We write the path of our file
+## Practice 1
+### Simple Linear Regression 
+We write the path of our file
 ```
 getwd()
 setwd("/Users/anahiestrada/Desktop/SimpleLinearRegression")
@@ -144,7 +145,8 @@ ggplot() +
 ## Practice 2
 
  
-## Practice 3. Multiple Linear Regression
+## Practice 3
+### Multiple Linear Regression
 converts the values of the state variable to numbers
 ```
 dataset $ State = factor (dataset $ State,
