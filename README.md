@@ -131,9 +131,8 @@ ggplot() +
   xlab('Ventas') +
   ylab('Comision')
   ```
+![resultadosP1](https://user-images.githubusercontent.com/60456115/83216809-051bfd80-a11f-11ea-9185-b1e4b8528883.png)
 
-
-   
 Visualising the Test set results
 ```
 ggplot() +
@@ -145,6 +144,7 @@ ggplot() +
   xlab('Ventas') +
   ylab('Comision')
 ```
+![resultadosP1 1](https://user-images.githubusercontent.com/60456115/83216840-182ecd80-a11f-11ea-8baa-6b4d98db3c59.png)
 
 ## Practice 2
 
@@ -207,7 +207,7 @@ summary (regressor)
 y_pred = predict (regressor, newdata = test_set)
 y_pred
 ```
-
+![P 3](https://user-images.githubusercontent.com/60456115/83216876-2a107080-a11f-11ea-97bb-a1c42fb4c247.png)
 
 The task analyzes the next spray backwards Elimination function.
 Variables are created in the equation and the least influential category is removed, one after the other is excluded in the loop because it ends when all categories are analyzed. The category that remained at the end was R.D. Spend your result marked 0.
@@ -329,7 +329,7 @@ in visualizing the results we see that only R.D.Spend is significant for our reg
 ```
 backwardElimination (training_set, SL)
 ```
-![P 3](https://user-images.githubusercontent.com/60456115/83215295-7b1e6580-a11b-11ea-8e0f-8e07ae1e7712.png)
+![P 4](https://user-images.githubusercontent.com/60456115/83216913-3f859a80-a11f-11ea-9288-3c7cf33eca25.png)
 
 ## Evaluation
 ```
