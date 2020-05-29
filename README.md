@@ -147,35 +147,42 @@ ggplot() +
 ![resultadosP1 1](https://user-images.githubusercontent.com/60456115/83216840-182ecd80-a11f-11ea-8baa-6b4d98db3c59.png)
 
 ## Practice 2
+```
 getwd()
 setwd("/Users/anahiestrada/Desktop/DataMining-master/MachineLearning/MultipleLinearRegression")
 getwd()
-
+```
 Importing the dataset
+```
 dataset <- read.csv('50_Startups.csv')
-
+```
 Encoding categorical data 
+```
 dataset$State = factor(dataset$State,
                        levels = c('New York', 'California', 'Florida'),
                        labels = c(1,2,3))
-
+```
 Splitting the dataset into the Training set and Test set
+```
 Install.packages('caTools)
 library(caTools)
 set.seed(123)
 split <- sample.split(dataset$Profit, SplitRatio = 0.8)
 training_set <- subset(dataset, split == TRUE)
 test_set <- subset(dataset, split == FALSE)
-
+```
 Fitting Simple Linear Regression to the Training set
+```
 regressor = lm(formula = Profit ~ R.D.Spend,
                data = dataset)
 summary(regressor) 
-
+```
 Predicting the Test set results
+```
 y_pred = predict(regressor, newdata = test_set) 
-
+```
 Visualising the Training set results
+```
 library(ggplot2)
 ggplot() +
   geom_point(aes(x=training_set$R.D.Spend, y=training_set$Profit),
@@ -185,8 +192,10 @@ ggplot() +
   ggtitle('Profit vs R.D.Spend (Training Set)') +
   xlab('R.D.Spend') +
   ylab('Profit')
-
+![P 2](https://user-images.githubusercontent.com/60456115/83234874-d8c7a780-a145-11ea-8ba0-a89ef52ce5c4.png)
+```
 Visualising the Test set results
+```
 ggplot() +
   geom_point(aes(x=test_set$R.D.Spend, y=test_set$Profit),
              color = 'blue', size=2) +
@@ -195,8 +204,8 @@ ggplot() +
   ggtitle('Profit vs R.D.Spend (Test Set)') +
   xlab('R.D.Spend') +
   ylab('Profit')
-
-
+```
+![P 2 2](https://user-images.githubusercontent.com/60456115/83234911-e9781d80-a145-11ea-9c72-e7746164f219.png)
 
  
 ## Practice 3
