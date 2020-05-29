@@ -1,5 +1,5 @@
 getwd()
-setwd("C:/Users/Daniel/Desktop/Practicas R")
+setwd("/Users/anahiestrada/Desktop/DataMining-master/MachineLearning/MultipleLinearRegression")
 getwd()
 
 # Importing the dataset
