@@ -383,13 +383,15 @@ p
 
 #Finally the graphic is customized by changing the color, size and font
 #For this we use element_text,
+library(extrafont)
+loadfonts(device = "win")
 p <- p + theme(axis.title.x = element_text(color = "Blue", size = 20) ,
                axis.title.y = element_text(color = "Blue", size = 20) ,
                axis.text.x  = element_text(size = 10),
                axis.text.y  = element_text(size = 10),
                plot.title   = element_text(size = 15),
                legend.title = element_text(size = 15),
-               text = element_text(family = "Courier"))
+               text = element_text(family = "Comic Sans MS"))
 p
 #Change the legend name of Studio y Budget...Mill
 p$labels$size <- "Budget $M"
@@ -405,6 +407,9 @@ The average gain for an action movie is 40 percent.
 The genre comedy is the one that has, on average, more profit
 The adventure genre has on average a lower profit.
 Buena vista studios has the movie with the most profit, it is from the drama genre. Also it has the film with less profit, being this one of the animation sort.
+## Link 
+[![video](https://youtu.be/8Rxiuc2GyG0)](https://youtu.be/8Rxiuc2GyG0)
+
 
 ## Sources
 - VilBer, F. (n.d.). Graficas con ggplot. Retrieved 28 May 2020, from [https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
