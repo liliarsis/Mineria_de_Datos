@@ -131,6 +131,9 @@ ggplot() +
   xlab('Ventas') +
   ylab('Comision')
   ```
+
+
+   
 Visualising the Test set results
 ```
 ggplot() +
@@ -204,6 +207,8 @@ summary (regressor)
 y_pred = predict (regressor, newdata = test_set)
 y_pred
 ```
+
+
 The task analyzes the next spray backwards Elimination function.
 Variables are created in the equation and the least influential category is removed, one after the other is excluded in the loop because it ends when all categories are analyzed. The category that remained at the end was R.D. Spend your result marked 0.
 The residuals show us distances that exist between the values of the variables and the data set quality values of the R2 adjustment, which in our case is 0.9425.
@@ -291,18 +296,6 @@ regressor = lm (formula = Profit ~ R.D.Spend + Administration + Marketing.Spend 
                data = dataset)
 summary (regressor)
 
-regressor = lm (formula = Profit ~ R.D.Spend + Administration + Marketing.Spend,
-               data = dataset)
-summary (regressor)
-
-regressor = lm (formula = Profit ~ R.D.Spend + Marketing.Spend,
-               data = dataset)
-summary (regressor)
-
-regressor = lm (formula = Profit ~ R.D.Spend + Marketing.Spend,
-               data = dataset)
-summary (regressor)
-
 y_pred = predict (regressor, newdata = test_set)
 y_pred
 ```
@@ -336,6 +329,7 @@ in visualizing the results we see that only R.D.Spend is significant for our reg
 ```
 backwardElimination (training_set, SL)
 ```
+![P 3](https://user-images.githubusercontent.com/60456115/83215295-7b1e6580-a11b-11ea-8e0f-8e07ae1e7712.png)
 
 ## Evaluation
 ```
