@@ -192,8 +192,9 @@ ggplot() +
   ggtitle('Profit vs R.D.Spend (Training Set)') +
   xlab('R.D.Spend') +
   ylab('Profit')
-![P 2](https://user-images.githubusercontent.com/60456115/83234874-d8c7a780-a145-11ea-8ba0-a89ef52ce5c4.png)
 ```
+![P 2](https://user-images.githubusercontent.com/60456115/83234874-d8c7a780-a145-11ea-8ba0-a89ef52ce5c4.png)
+
 Visualising the Test set results
 ```
 ggplot() +
