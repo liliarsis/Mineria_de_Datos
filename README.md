@@ -125,7 +125,7 @@ getwd()
 ```
 Importing the dataset
 ```
-dataset <- read.csv('ventas_comision.csv')
+dataset <- read.csv(file.choose())
 ```
 Splitting the dataset into the Training set and Test set
 Install.packages('caTools')
@@ -133,16 +133,16 @@ The set.seed function is used to set the random seed for all scrambling function
 
 ```
 install.packages('caTools')
-library(caTools)
+llibrary(caTools)
 set.seed(123)
-split <- sample.split(dataset$comision, SplitRatio = 2/3)
+split <- sample.split(dataset$Data_value , SplitRatio = 2/3)
 training_set <- subset(dataset, split == TRUE)
 test_set <- subset(dataset, split == FALSE)
 ```
 Fitting Simple Linear Regression to the Training set
 commission is the variable that we want to predict in the future depending on sales.
 ```
-regressor = lm(formula = comision ~ Ventas,
+regressor = lm(formula =Data_value ~ Period  ,
                data = dataset)
 summary(regressor)
 ```
@@ -154,26 +154,26 @@ Visualising the Training set results
 ```
 library(ggplot2)
 ggplot() +
-  geom_point(aes(x=training_set$Ventas, y=training_set$comision),
-             color = 'blue') +
-  geom_line(aes(x = training_set$Ventas, y = predict(regressor, newdata = training_set)),
-            color = 'green') +
-  ggtitle('ventas vs comision (Training Set)') +
-  xlab('Ventas') +
-  ylab('Comision')
+  geom_point(aes(x=training_set$Period, y=training_set$Data_value),
+             color = 'green') +
+  geom_line(aes(x = training_set$Period, y = predict(regressor, newdata = training_set)),
+            color = 'blue') +
+  ggtitle('productivity statistics (Training Set)') +
+  xlab('Period') +
+  ylab('Data_value')
   ```
 ![resultadosP1](https://user-images.githubusercontent.com/60456115/83216809-051bfd80-a11f-11ea-9185-b1e4b8528883.png)
 
 Visualising the Test set results
 ```
 ggplot() +
-  geom_point(aes(x=test_set$Ventas, y=test_set$comision),
-             color = 'blue') +
-  geom_line(aes(x = training_set$Ventas, y = predict(regressor, newdata = training_set)),
-            color = 'green') +
-  ggtitle('ventas vs comision (Test Set)') +
-  xlab('Ventas') +
-  ylab('Comision')
+  geom_point(aes(x=test_set$Period, y=test_set$Data_value),
+             color = 'red') +
+  geom_line(aes(x = training_set$Period, y = predict(regressor, newdata = training_set)),
+            color = 'blue') +
+  ggtitle('productivity statistics (Test Set)') +
+  xlab('Period') +
+  ylab('Data_value')
 ```
 ![resultadosP1 1](https://user-images.githubusercontent.com/60456115/83216840-182ecd80-a11f-11ea-8baa-6b4d98db3c59.png)
 
