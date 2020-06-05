@@ -162,7 +162,7 @@ ggplot() +
   xlab('Period') +
   ylab('Data_value')
   ```
-![resultadosP1](https://user-images.githubusercontent.com/60456115/83216809-051bfd80-a11f-11ea-9185-b1e4b8528883.png)
+![p1](https://user-images.githubusercontent.com/60456115/83838659-b9cd9600-a6ae-11ea-8ed6-713131152a4f.png)
 
 Visualising the Test set results
 ```
@@ -175,7 +175,7 @@ ggplot() +
   xlab('Period') +
   ylab('Data_value')
 ```
-![resultadosP1 1](https://user-images.githubusercontent.com/60456115/83216840-182ecd80-a11f-11ea-8baa-6b4d98db3c59.png)
+![p2](https://user-images.githubusercontent.com/60456115/83838661-bb975980-a6ae-11ea-808d-5a3f35f98da0.png)
 
 ## Practice 2
 ```
