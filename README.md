@@ -16,7 +16,8 @@ Next, the practices carried out in this course will be shown.
 - [Practice 2](#practice-2)
 - [Practice 3](#practice-3)
 - [Practice 4](#practice-4)
-- [Evaluation](#evaluation)
+- [Evaluation 2](#evaluation-2)
+- [Evaluation 3](#evaluation)-3
 - [Sources](#sources)
 - [Collaborators](#Collaborators)
 
@@ -590,7 +591,7 @@ Buena vista studios has the movie with the most profit, it is from the drama gen
 ## Link 
 [![video](https://youtu.be/8Rxiuc2GyG0)](https://youtu.be/8Rxiuc2GyG0)
 
-## Evaluation 3
+## Evaluation 2
 ```
 #load the dataset social network ads
 dataset <- read.csv (file.choose ())
@@ -654,7 +655,7 @@ contour (X1, X2, matrix (as.numeric (y_grid), length (X1), length (X2)), add = T
 points (grid_set, pch = '.', col = ifelse (y_grid == 1, 'green', 'tomato'))
 points (set, pch = 21, bg = ifelse (set [, 3] == 1, 'blue', 'red'))
 ```
-## Link 
+## Link 3
 [![video](https://www.youtube.com/watch?v=3zF7wZTRBz4&t=386s)
 
 ## Sources
