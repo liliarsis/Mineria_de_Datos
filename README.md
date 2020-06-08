@@ -49,6 +49,10 @@ clusplot(iris2, y_kmeans,
 ```
 ![Cluster](https://github.com/liliarsis/mineria_de_datos/blob/unit3/evaluacion_4/irisClusterPlot.png)
 
+## Analysis
+The Iris dataset contains four characteristics (length and width of sepals and petals) of 50 samples from three species of Iris (Iris setosa, Iris virginica and Iris versicolor). These measurements were used to create a model to group the species.
+In the graph we can see that the data for setosa are concrete (pink group), but versicolor and virginica overlap each other (blue and red group). This happens because the length of the petal of the setosa class is shorter than the length of the petal of the two other classes. Therefore this group distances itself from the others.
+
 ## Collaborators
 * **Anahi Estrada** - [Github](https://github.com/anahi-17)
 * **Lilia Rosales** - [Github](https://github.com/liliarsis)
