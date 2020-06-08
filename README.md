@@ -47,6 +47,7 @@ clusplot(iris2, y_kmeans,
 
 
 ```
+![Cluster](https://github.com/liliarsis/mineria_de_datos/blob/unit3/evaluacion_4/irisClusterPlot.png)
 
 ## Collaborators
 * **Anahi Estrada** - [Github](https://github.com/anahi-17)
