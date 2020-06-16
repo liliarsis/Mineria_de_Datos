@@ -1,11 +1,11 @@
-# Unit 1
+## Unit 1
 
-## Introduction
+### Introduction
 Data mining is the process of discovering patterns in large data sets involving methods at the intersection of machine learning, statistics, and database systems.
 
 Next, the practices carried out in this course will be shown.
 
-# Content
+## Content
 - [Practice 1](#practice-1)
 - [Practice 2](#practice-2)
 - [Practice 3](#practice-3)
@@ -13,7 +13,7 @@ Next, the practices carried out in this course will be shown.
 - [Practice 5](#practice-5)
 - [Collaborators](#Collaborators)
 
-## Practice 1
+### Practice 1
 
 Test the Law Of Large Numbers for N random normally distributed numbers with mean = 0, stdev=1:
 
@@ -35,7 +35,7 @@ result <- counter / N #6. return a result <- counter / N
 result
 ```
 
-## Practice 2
+### Practice 2
 
  Find 20 more functions in R and make an example of it.
  ```
@@ -132,7 +132,7 @@ runif (3,1,10)
 
 ```
 
-## Practice 3
+### Practice 3
 
 ```
 #Data
@@ -213,7 +213,7 @@ M <- rbind(
 M
 ```
 
-## Practice 4
+### Practice 4
 ```
 # You have been supplied data for two more additional in-game statistics:
 # * Free Throws
@@ -344,7 +344,7 @@ myplot(FThrow/FThrowAttempts)
 myplot((Points -  FThrow) / FieldGoals)
 ```
 
-## Practice 5
+### Practice 5
 ```
 # Method 1: Select the file manually
 stats <- read.csv (file.choose ())
@@ -441,6 +441,6 @@ stats [stats $ Country.Name == "Netherlands",]
 #Filter by country Norway
 stats [stats $ Country.Name == "Norway",]
 ```
-## Collaborators
+### Collaborators
 * **Anahi Estrada** - [Github](https://github.com/anahi-17)
 * **Lilia Rosales** - [Github](https://github.com/liliarsis)
