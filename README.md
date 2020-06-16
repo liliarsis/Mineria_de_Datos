@@ -1,10 +1,10 @@
-# Unit 2
+## Unit 2
 
-## Introduction
+### Introduction
 Data graphics is essential in displaying large amounts of information in a concise and concise way. It helps us to make decisions. In the R language, it is used thanks to the ggplot library.
 Next, the practices carried out in this course will be shown.
 
-# Content
+## Content
 - [Homework 1](#Homework-1)
 - [Homework 2](#IHomework-2)
 - [Homework 3](#Homework-3)
@@ -21,7 +21,7 @@ Next, the practices carried out in this course will be shown.
 - [Sources](#sources)
 - [Collaborators](#Collaborators)
 
-## Homework 1
+### Homework 1
 ### What is Graphical grammar?
 Graphical grammar is an orderly representation system for plotting graphs. It consists of dividing the parts involved in painting data and analyzing it as if it were a matter of spelling grammar, giving each element a characteristic function. The objects thus generated are defined by overlapping feature layers.
 The graphical grammar that ggplot uses is sorting and creating graphical objects with a predefined assembly structure. According to the creations created by Leland Wilkinson in 1999, graphics are objects created by the supremacy of layers. These layers are mainly:
@@ -34,7 +34,7 @@ The graphical grammar that ggplot uses is sorting and creating graphical objects
 - coordinates: the space in which the data is painted.
 - themes: ink or canvas format.
 
-## Homework 2
+### Homework 2
 ### What is geom_jitter function in R?
 Jittered Points
 The jitter geom is a convenient shortcut for geom_point(position = "jitter"). It adds a small amount of random variation to the location of each point, and is a useful way of handling overplotting caused by discreteness in smaller datasets.
@@ -55,7 +55,7 @@ geom_jitter(
 )
 ```
 
-## Homework 3
+### Homework 3
 ### What is P value?
 When you perform a hypothesis test in statistics, a p-value helps you determine the significance of your results. Hypothesis tests are used to test the validity of a claim that is made about a population. This claim that’s on trial, in essence, is called the null hypothesis.
 The alternative hypothesis is the one you would believe if the null hypothesis is concluded to be untrue. The evidence in the trial is your data and the statistics that go along with it. All hypothesis tests ultimately use a p-value to weigh the strength of the evidence (what the data are telling you about the population). The p-value is a number between 0 and 1 and interpreted in the following way:
@@ -66,7 +66,7 @@ The alternative hypothesis is the one you would believe if the null hypothesis i
 
 For example, suppose a pizza place claims their delivery times are 30 minutes or less on average but you think it’s more than that. You conduct a hypothesis test because you believe the null hypothesis, Ho, that the mean delivery time is 30 minutes max, is incorrect. Your alternative hypothesis (Ha) is that the mean time is greater than 30 minutes. You randomly sample some delivery times and run the data through the hypothesis test, and your p-value turns out to be 0.001, which is much less than 0.05. In real terms, there is a probability of 0.05 that you will mistakenly reject the pizza place’s claim that their delivery time is less than or equal to 30 minutes. Since typically we are willing to reject the null hypothesis when this probability is less than 0.05, you conclude that the pizza place is wrong; their delivery times are in fact more than 30 minutes on average, and you want to know what they’re gonna do about it! (Of course, you could be wrong by having sampled an unusually high number of late pizza deliveries just by chance.)
 
-## Homework 4
+### Homework 4
 ### Split and Lm functions in R
 Split Data Into Test And Train Set
 Split data from vector Y into two sets in predefined ratio while preserving relative ratios of different labels in Y. Used to split the data used during classification into train and test subsets.
@@ -83,7 +83,7 @@ lm(formula, data, subset, weights, na.action,
    method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
    singular.ok = TRUE, contrasts = NULL, offset, …)
 ```   
-## Homework 5
+### Homework 5
 ### Function gml () 
 
 One of the great dilemmas in all data analysis is knowing which are the variables that most influence us in a given condition.
@@ -95,11 +95,11 @@ The basic syntax for obtaining a linear model is
 
 glm (dependent ~ independent1 + independent2, family = binomial (), data = data ").
 
-## Homework 6
+### Homework 6
 ### What is ElemStatLearn?
 ElemStatLearn Library is a package created 2015-06-26 cointains Data Sets, Functions and Examples from the Book: "The Elements of Statistical Learning, Data Mining, Inference, and Prediction" by Trevor Hastie, Robert Tibshirani and Jerome Friedman. Useful when reading the book above mentioned, in the documentation referred to as 'the book'.
 
-## Homework 7
+### Homework 7
 ### BodyPartRecognition
 
 Applications of computer vision techniques became very popular. Among them, the recognition of human activity stands out. To recognize human activities, there is a human body part tracking system that tracks parts of the human body such as the head, torso, arms, and legs to perform activity recognition tasks in real time. To track the torso, we are using a spot tracking module to find the approximate location and size of the torso in each box. By tracking the torso, we will be able to track other body parts based on their location relative to the torso in the detected silhouette. In the proposed method for tracking human body parts, we are also using a refinement module to improve the detected silhouette by refining the foreground mask (i.e. by obtaining by subtraction background) to detect body parts with regarding the location and size of the torso. Having found the size and location of the torso, the region of each part of the human body in the silhouette will be modeled by a 2D Gaussian drop in each box to show its location, size, and position. The proposed approach described in this thesis accurately tracks body parts under different lighting conditions and in the presence of partial occlusions. The proposed approach applies to activity recognition tasks, such as approaching an object, carrying out an object, and opening a box or suitcase.
@@ -116,7 +116,7 @@ The simple and discriminating depth comparison imaging features produce 3D trans
 For greater speed, the classifier can be paralleled at each pixel on a GPU.
 Finally, the spatial modes of the inferred distributions per pixel are calculated using the mean displacement that results in joint 3D proposals.
 
-## Practice 1
+### Practice 1
 ### Simple Linear Regression 
 We write the path of our file
 ```
@@ -178,7 +178,7 @@ ggplot() +
 ```
 ![p2](https://user-images.githubusercontent.com/60456115/83838661-bb975980-a6ae-11ea-808d-5a3f35f98da0.png)
 
-## Practice 2
+### Practice 2
 ```
 getwd()
 setwd("/Users/anahiestrada/Desktop/DataMining-master/MachineLearning/MultipleLinearRegression")
@@ -241,7 +241,7 @@ ggplot() +
 ![P 2 2](https://user-images.githubusercontent.com/60456115/83234911-e9781d80-a145-11ea-9c72-e7746164f219.png)
 
  
-## Practice 3
+### Practice 3
 ### Multiple Linear Regression
 converts the values of the state variable to numbers
 ```
@@ -325,8 +325,8 @@ training set
 backwardElimination (training_set, SL)
 ```
 
-## Practice 4
-## Backward Elimination Function
+### Practice 4
+### Backward Elimination Function
 ```
 getwd ()
 setwd ("/ Users / anahiestrada / Desktop / DataMining-master / MachineLearning / MultipleLinearRegression")
@@ -423,7 +423,7 @@ backwardElimination (training_set, SL)
 ```
 ![P 4](https://user-images.githubusercontent.com/60456115/83216913-3f859a80-a11f-11ea-9288-3c7cf33eca25.png)
 
-## Practice 6
+### Practice 6
 ### Decision Tree Classification
 ```
 //Importing the dataset
@@ -512,7 +512,7 @@ plot(classifier)
 text(classifier, cex=0.6)
 ```
 
-## Evaluation 2
+### Evaluation 2
 ```
 #1. . We import the dataset and declare it as movies
 movies <- read.csv("C:/Users/W 10 PRO/Downloads/Project-Data.csv")
@@ -588,10 +588,10 @@ The average gain for an action movie is 40 percent.
 The genre comedy is the one that has, on average, more profit
 The adventure genre has on average a lower profit.
 Buena vista studios has the movie with the most profit, it is from the drama genre. Also it has the film with less profit, being this one of the animation sort.
-## Link 
+### Link 
 [![video](https://youtu.be/8Rxiuc2GyG0)](https://youtu.be/8Rxiuc2GyG0)
 
-## Evaluation 3
+### Evaluation 3
 ```
 #load the dataset social network ads
 dataset <- read.csv (file.choose ())
@@ -655,10 +655,10 @@ contour (X1, X2, matrix (as.numeric (y_grid), length (X1), length (X2)), add = T
 points (grid_set, pch = '.', col = ifelse (y_grid == 1, 'green', 'tomato'))
 points (set, pch = 21, bg = ifelse (set [, 3] == 1, 'blue', 'red'))
 ```
-## Link 3
+### Link 3
 [![video](https://www.youtube.com/watch?v=3zF7wZTRBz4&t=386s)
 
-## Sources
+### Sources
 - VilBer, F. (n.d.). Graficas con ggplot. Retrieved 28 May 2020, from [https://enrdados.netlify.app/post/graficas-con-ggplot/](https://enrdados.netlify.app/post/graficas-con-ggplot/)
 - Wickham, H. (n.d.). geom_jitter function | R Documentation. Retrieved 28 May 2020, from [https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.0/topics/geom_jitter)
 - Rumsey, D. J. (n.d.). What a p-Value Tells You about Statistical Data - dummies. (2020). Retrieved 28 May 2020, from [https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/](https://www.dummies.com/education/math/statistics/what-a-p-value-tells-you-about-statistical-data/)
@@ -669,6 +669,6 @@ points (set, pch = 21, bg = ifelse (set [, 3] == 1, 'blue', 'red'))
 - C. (2019, August 12). cran/ElemStatLearn. Retrieved May 28, 2020, from
 [https://github.com/cran/ElemStatLearn/tree/master/R](https://github.com/cran/ElemStatLearn/tree/master/R)
 
-## Collaborators
+### Collaborators
 * **Anahi Estrada** - [Github](https://github.com/anahi-17)
 * **Lilia Rosales** - [Github](https://github.com/liliarsis)
